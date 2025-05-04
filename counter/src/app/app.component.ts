@@ -8,5 +8,4 @@ import { CounterComponent } from './counter/counter.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'counter';
 }
