@@ -1,11 +1,39 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-stopwatch',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './stopwatch.component.html',
-  styleUrl: './stopwatch.component.scss'
+  styleUrl: './stopwatch.component.scss',
 })
 export class StopwatchComponent {
+  elapsedTime = 0;
+  isRunning: boolean = false;
+  intervalRef: any;
 
+  private start() {
+    this.isRunning = true;
+    this.intervalRef = setInterval(() => {
+      this.elapsedTime += 0.1;
+    }, 100);
+    console.log('Stopwatch started.');
+  }
+
+  private stop() {
+    this.isRunning = false;
+    clearInterval(this.intervalRef);
+    console.log('Stopwatch stopped.');
+  }
+
+  startStop() {
+    this.isRunning ? this.stop() : this.start();
+  }
+
+  reset() {
+    this.isRunning = false;
+    clearInterval(this.intervalRef);
+    this.elapsedTime = 0;
+    console.log('Stopwatch reset.');
+  }
 }
