@@ -1,0 +1,17 @@
+<div class="game-container">
+  <h1>Rock Paper Scissors</h1>
+  <div class="choices">
+    <button *ngFor="let choice of choices" (click)="play(choice)">
+      {{ choice }}
+    </button>
+  </div>
+  <div class="results" *ngIf="playerChoice && computerChoice">
+    <p>
+      You chose: <strong>{{ playerChoice }}</strong>
+    </p>
+    <p>
+      Computer chose: <strong>{{ computerChoice }}</strong>
+    </p>
+  </div>
+  <h2>{{ result }}</h2>
+</div>
