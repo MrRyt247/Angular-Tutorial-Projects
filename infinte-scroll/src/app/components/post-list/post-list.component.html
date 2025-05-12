@@ -1,1 +1,5 @@
-<p>post-list works!</p>
+<div class="posts">
+  <app-post *ngFor="let post of posts" [post]="post"></app-post>
+  <div class="loading" *ngIf="loading">Loading...</div>
+  <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

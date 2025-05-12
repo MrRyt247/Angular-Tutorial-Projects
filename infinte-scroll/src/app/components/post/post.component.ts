@@ -16,6 +16,7 @@ export class PostComponent implements OnInit {
 
   private genrateRandomPhoto(): void {
     const randomSeed = this.genrateRandomNumber(1000);
+    this.randomPhotoUrl = `https://picsum.photos/seed/${randomSeed}/50`;
   }
 
   private genrateRandomNumber(max: number): number {
