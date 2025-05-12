@@ -1,1 +1,11 @@
-<p>post works!</p>
+<div class="post">
+  <div class="post-header">
+    <img
+      [src]="randomPhotoUrl"
+      alt="Profile randomPhotoUrl"
+      class="profile-photo"
+    />
+    <h3>{{ post.title }}</h3>
+  </div>
+  <p>{{ post.body }}</p>
+</div>
