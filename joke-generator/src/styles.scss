@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light dark;
+  --primary-dark-color: #09386b;
+  --primary-dark-color-dark: #09072e;
+  --primary-light-color: #054f9d;
+  --primary-light-color-dark: #132d79;
+  --primary-color-light: #005dc1;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background-color: light-dark(var(--primary-light-color-dark), var(--primary-dark-color-dark));
+}
