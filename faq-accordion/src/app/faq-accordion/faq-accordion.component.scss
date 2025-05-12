@@ -1,7 +1,12 @@
 .faq-container {
   max-width: 600px;
-  margin: 0 auto;
+  min-width: 400px;
+  margin: auto;
   font-family: Arial, sans-serif;
+  border: 1px solid #d4d4d4;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  padding: 4px;
 }
 
 .faq-item {
