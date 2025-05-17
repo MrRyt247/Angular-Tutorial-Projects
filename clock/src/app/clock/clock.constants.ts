@@ -1,0 +1,6 @@
+export const CLOCK_CONSTANTS = {
+  CENTER_OFFSET: 50,
+  RADIUS: 45,
+  DEGREES_PER_HOUR: 30,
+  DEG_TO_RAD: Math.PI / 180,
+}
