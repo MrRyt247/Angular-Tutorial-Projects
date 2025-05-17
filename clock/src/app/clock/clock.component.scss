@@ -3,28 +3,77 @@
   width: 350px;
   height: 350px;
   margin: 50px auto;
-  border: solid 3px black;
+  border: inset 3px goldenrod;
   border-radius: 50%;
-  background: linear-gradient(to right, #eee, #d4d4d4);
+  background: linear-gradient(to right, #d3d3d3, #d4d4d4);
+  box-shadow: 0 0 0 3px goldenrod, 0 0 4px 5px #0007;
 }
 
 .number {
   position: absolute;
-  font-size: 19px;
+  font-size: 1.75rem;
   font-weight: bold;
-  color: #000;
+  color: goldenrod;
+  text-shadow: 0 0 1px black;
   transform: translate(-50%, -50%);
   user-select: none;
+
+  &:nth-child(3n) {
+    font-size: 4rem;
+  }
+
+  &:nth-child(3) {
+    translate: -0.5rem 0;
+  }
+
+  &:nth-child(6) {
+    translate: 0 -0.8rem;
+  }
+
+  &:nth-child(9) {
+    translate: 0.5rem 0;
+  }
+
+  &:nth-child(12) {
+    translate: 0 0.8rem;
+  }
 }
+
 
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   background-color: #000;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-15%, -50%);
   z-index: 1;
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  box-shadow: 0 0 20px 0 #000a;
+}
+
+.hour {
+  width: 3px;
+  height: 70px;
+  background: linear-gradient(to bottom, #000, #4d4d4d);
+}
+
+.minute {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #4d4d4d, #b3b3b3);
+}
+
+.second {
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(to bottom, #f00, #ff8080);
 }
