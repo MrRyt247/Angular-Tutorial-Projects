@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CLOCK_CONSTANTS as cc } from './clock.constants';
 import { TimeService } from '../services/time.service';
+import { MockTimeService } from '../services/mock-time.service';
 
 @Component({
   selector: 'app-clock',
@@ -34,6 +35,11 @@ export class ClockComponent implements OnInit {
     this.updateClock();
   }
 
+  // constructor(private timeService: MockTimeService) {
+  //   // MockTimeService is used for testing
+  //   this.updateClock();
+  // }
+
   ngOnInit() {
     this.updateClock();
     setInterval(() => {
@@ -48,7 +54,9 @@ export class ClockComponent implements OnInit {
       now.getMinutes() * cc.MINUTE_ADJUSTMENT +
       cc.OFFSET_ROTATION;
     this.minutes =
-      now.getMinutes() * cc.DEGREES_PER_MINUTE_SECOND + now.getSeconds() * cc.SECOND_ADJUSTMENT +cc.OFFSET_ROTATION;
+      now.getMinutes() * cc.DEGREES_PER_MINUTE_SECOND +
+      now.getSeconds() * cc.SECOND_ADJUSTMENT +
+      cc.OFFSET_ROTATION;
     this.seconds =
       now.getSeconds() * cc.DEGREES_PER_MINUTE_SECOND + cc.SECOND_ADJUSTMENT;
   }

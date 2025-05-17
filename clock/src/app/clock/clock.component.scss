@@ -46,9 +46,10 @@
   left: 50%;
   width: 6px;
   height: 6px;
-  background-color: #000;
   border-radius: 50%;
-  transform: translate(-15%, -50%);
+  background-color: goldenrod;
+  box-shadow: 0 0 1px 0 #0008;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
@@ -62,18 +63,18 @@
 
 .hour {
   width: 3px;
-  height: 70px;
-  background: linear-gradient(to bottom, #000, #4d4d4d);
+  height: 90px;
+  background: linear-gradient(to bottom, gold, goldenrod);
 }
 
 .minute {
   width: 2px;
-  height: 100px;
-  background: linear-gradient(to bottom, #4d4d4d, #b3b3b3);
+  height: 120px;
+  background: linear-gradient(to bottom, gold, goldenrod);
 }
 
 .second {
   width: 1px;
-  height: 120px;
+  height: 150px;
   background: linear-gradient(to bottom, #f00, #ff8080);
 }

@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MockTimeService {
+  private mockDate: Date = new Date();
 
-  constructor() { }
+  constructor() {
+    this.mockDate.setHours(20, 5, 23); // Set to 20:05:23
+  }
+
+  getCurrentTime(): Date {
+    return this.mockDate;
+  }
 }
