@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { CLOCK_CONSTANTS as cc} from './clock.constants';
+import { CLOCK_CONSTANTS as cc } from './clock.constants';
 
 @Component({
   selector: 'app-clock',
   imports: [CommonModule],
   templateUrl: './clock.component.html',
-  styleUrl: './clock.component.scss'
+  styleUrl: './clock.component.scss',
 })
 export class ClockComponent {
   // Rotation angles
@@ -21,11 +21,12 @@ export class ClockComponent {
     const radius = cc.RADIUS;
 
     for (let i = 1; i <= 12; i++) {
-      const angle = (i * cc.DEGREES_PER_HOUR) * cc.DEG_TO_RAD;
+      const angle = (i - 3) * cc.DEGREES_PER_HOUR * cc.DEG_TO_RAD;
       const x = centerOffset + radius * Math.cos(angle);
       const y = centerOffset + radius * Math.sin(angle);
-      numbers.push({ number: i, position: { top: `${x}%`, left: y+'%'}});
+      numbers.push({ number: i, position: { x: `${x}%`, y: `${y}%` } });
     }
+    console.log(numbers);
     return numbers;
   }
 }
