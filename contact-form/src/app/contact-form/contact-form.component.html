@@ -1,1 +1,54 @@
-<p>contact-form works!</p>
+<div class="container">
+  <h2>Contact Form</h2>
+  <form>
+    <div>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+        autocomplete="off"
+      />
+      <div class="error-message">
+        <!-- placeholder -->
+      </div>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        autocomplete="off"
+      />
+      <div class="error-message">
+        <!-- placeholder -->
+      </div>
+    </div>
+    <div>
+      <label for="Subject">Subject:</label>
+      <input
+        type="text"
+        id="subject"
+        placeholder="Enter the subject"
+        autocomplete="off"
+      />
+      <div class="error-message">
+        <!-- placeholder -->
+      </div>
+    </div>
+    <div>
+      <label for="message">Message:</label>
+      <textarea type="text" id="message" rows="5" autocomplete="off"></textarea>
+      <div class="error-message">
+        <!-- placeholder -->
+      </div>
+    </div>
+
+    <button type="submit"> Submit</button>
+
+    <div class="success-message">
+      <!-- placeholder -->
+    </div>
+  </form>
+</div>
