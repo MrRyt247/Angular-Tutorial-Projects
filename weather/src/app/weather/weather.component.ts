@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { WeatherService } from '../service/weather.service';
 
 @Component({
   selector: 'app-weather',
@@ -9,7 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './weather.component.scss',
 })
 export class WeatherComponent {
-  weatherForm = FormGroup;
+  weatherForm: FormGroup;
   weatherData: any = null;
   temperatureEmoji: string | null = null;
   humidityEmoji: string | null = null;
@@ -58,7 +59,7 @@ export class WeatherComponent {
   fetchWeather() {
     if (this.weatherForm.invalid) return;
 
-    const city = this.weatherForm.value.city;
+    const city: string = this.weatherForm.value.city;
     this.isLoading = true;
     this.errorMessage = null;
     this.weatherData = null;
