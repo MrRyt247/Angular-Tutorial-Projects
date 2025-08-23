@@ -6,7 +6,7 @@
   </form>
 
   <div class="loading" *ngIf="isLoading">Loading...</div>
-  <div class="errorMessage" *ngIf="errorMessage">{{ errorMessage }}</div>
+  <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
   <div class="weather-info" *ngIf="weatherData">
     <h2>Weather in {{ weatherData.name }}</h2>
     <p>
